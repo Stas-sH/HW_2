@@ -5,7 +5,7 @@ func main() {
     arr := []int{4, 1, 4, -4, 6, 4, 3, 8, 8}
     a1:=make([]int, len(arr), len(arr))
     var k int
-    //var result []int
+    var result []int
     
     //делаем копию масива(она понадобиться в конце))))
     for i:=0; i<len(arr); i++{//
@@ -41,14 +41,15 @@ func main() {
     }
     
     //создаем новый масив без повторяющихся єлементов
-    result:=make([]int, len(arr)-k, len(arr)-k)
+    aa:=make([]int, len(arr)-k, len(arr)-k)
     jj:=0
     for i:=0; i<len(arr); i++{
         if arr[i]==ch {
             continue
         }
-        result[jj]=arr[i]
+        aa[jj]=arr[i]
         jj++
     }
+    result=aa
     fmt.Println(result)
 }
